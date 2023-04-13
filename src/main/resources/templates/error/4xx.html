@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+    <th:block th:replace="~{fragments :: resources}"></th:block>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+
+    <title>Error [[${status}]]</title>
+</head>
+<body class="bg-warning text-light">
+
+<div th:replace="~{fragments:: navbar('error', '', false)}"></div>
+<div class="container py-3">
+    <h1 class="text-center mb-3 mt-5"><i class="fa-solid fa-triangle-exclamation"></i> Oops Client Error</h1>
+    <div class="mb-3" th:if="${exception}">
+        <!-- only in dev mode -->
+        <p th:text="${exception}"></p>
+        <p th:text="${trace}"></p>
+    </div>
+    <p class="text-center mt-3">
+        <a class="btn btn-light" th:href="@{/}">Go back to home</a>
+    </p>
+</div>
+</body>
+</html>
