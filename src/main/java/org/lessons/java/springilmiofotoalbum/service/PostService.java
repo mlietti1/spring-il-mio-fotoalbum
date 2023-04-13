@@ -21,6 +21,7 @@ public class PostService {
         postToPersist.setTitle(formPost.getTitle());
         postToPersist.setDescription(formPost.getDescription());
         postToPersist.setUrl(formPost.getUrl());
+        postToPersist.setIsVisible(formPost.getIsVisible());
         postToPersist.setCategories(formPost.getCategories());
         postToPersist.setCreatedAt(LocalDateTime.now());
         postToPersist.setUpdatedAt(LocalDateTime.now());
@@ -32,6 +33,7 @@ public class PostService {
         postToUpdate.setTitle(formPost.getTitle());
         postToUpdate.setDescription(formPost.getDescription());
         postToUpdate.setUrl(formPost.getUrl());
+        postToUpdate.setIsVisible(formPost.getIsVisible());
         postToUpdate.setCategories(formPost.getCategories());
         postToUpdate.setUpdatedAt(LocalDateTime.now());
         return postRepository.save(postToUpdate);

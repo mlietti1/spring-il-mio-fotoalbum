@@ -5,3 +5,15 @@ INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at,
 INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Lorem Ipsum 2', 'Descrizione del mio quinto post', 'https://picsum.photos/id/19/200/200', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
 INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('New Cover', 'Descrizione del mio sesto post', 'https://picsum.photos/id/22/200/200', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
 INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Collection 3', 'Descrizione del mio settimo post', 'https://picsum.photos/id/29/200/200', 0, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
+INSERT INTO db_fotoalbum.categories (name) VALUES ('portrait');
+INSERT INTO db_fotoalbum.categories (name) VALUES ('landscape');
+INSERT INTO db_fotoalbum.categories (name) VALUES ('macro');
+INSERT INTO db_fotoalbum.categories (name) VALUES ('sports');
+INSERT INTO db_fotoalbum.categories (name) VALUES ('event');
+INSERT INTO db_fotoalbum.categories (name) VALUES ('long exposure');
+INSERT INTO db_fotoalbum.categories (name) VALUES ('black and white');
+INSERT INTO db_fotoalbum.categories (name) VALUES ('retro');
+INSERT INTO db_fotoalbum.categories (name) VALUES ('nature');
+INSERT INTO db_fotoalbum.categories (name) VALUES ('art');
+INSERT INTO db_fotoalbum.categories (name) VALUES ('graffiti');
+INSERT INTO db_fotoalbum.categories (name) VALUES ('gallery');

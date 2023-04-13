@@ -16,8 +16,17 @@ nav{
 }
 
 .truncate {
-      width: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card {
+    border-color: darkgray;
+}
+
+.card:hover{
+    transform: scale(1.02, 1.02);
+
 }

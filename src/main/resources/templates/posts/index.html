@@ -26,7 +26,9 @@
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
         <div th:if="${post.isVisible}" class="col mb-3" th:each="post : ${list}" th:object="${post}">
             <div class="card bg-dark border-secondary">
-                <img th:src="*{url}" class="card-img-top" alt="...">
+                <a th:href="@{|/posts/*{id}|}">
+                    <img th:src="*{url}" class="card-img-top" alt="...">
+                </a>
                 <div class="card-body">
                     <h5 th:text="*{title}" class="card-title"></h5>
                     <p th:text="*{description}" class="card-text truncate"></p>
