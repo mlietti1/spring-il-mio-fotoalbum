@@ -1,7 +1,16 @@
 body {
     color: white;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
+
+span, label {
+    font-weight: 100;
+}
+
+form p {
+    font-weight: 100;
+}
+
 
 .wrapper{
     height: calc(100vh - 56px);
@@ -44,4 +53,8 @@ nav{
 
 .card-btn:hover{
     text-decoration: underline !important;
+}
+
+.card p, .card span {
+    font-weight: 100;
 }
