@@ -3,6 +3,11 @@ body {
     font-family: 'Quicksand', sans-serif;
 }
 
+.wrapper{
+    height: calc(100vh - 56px);
+    overflow: auto;
+}
+
 .logo{
     height: 32px;
 }
@@ -23,10 +28,20 @@ nav{
 }
 
 .card {
-    border-color: darkgray;
+    color: black;
+    border-radius: 0;
+    opacity: 75%;
+    transition: all 0.5s;
+}
+
+.card-img-top{
+    border-radius: 0;
 }
 
 .card:hover{
-    transform: scale(1.02, 1.02);
+    opacity: 100%
+}
 
+.card-btn:hover{
+    text-decoration: underline !important;
 }

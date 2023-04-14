@@ -1,10 +1,10 @@
-INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Lorem Ipsum', 'Descrizione del mio primo post', 'https://picsum.photos/id/15/200/200', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
-INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Nuovo Post', 'Descrizione del mio secondo post', 'https://picsum.photos/id/18/200/200', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
-INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Sic Amet', 'Descrizione del mio terzo post', 'https://picsum.photos/id/13/200/200', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
-INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Altra Foto', 'Descrizione del mio quarto post', 'https://picsum.photos/id/14/200/200', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
-INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Lorem Ipsum 2', 'Descrizione del mio quinto post', 'https://picsum.photos/id/19/200/200', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
-INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('New Cover', 'Descrizione del mio sesto post', 'https://picsum.photos/id/22/200/200', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
-INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Collection 3', 'Descrizione del mio settimo post', 'https://picsum.photos/id/29/200/200', 0, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
+INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Lorem Ipsum', 'Descrizione del mio primo post', 'https://picsum.photos/id/15/800/800', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
+INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Nuovo Post', 'Descrizione del mio secondo post', 'https://picsum.photos/id/18/800/800', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
+INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Sic Amet', 'Descrizione del mio terzo post', 'https://picsum.photos/id/13/800/800', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
+INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Altra Foto', 'Descrizione del mio quarto post', 'https://picsum.photos/id/14/800/800', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
+INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Lorem Ipsum 2', 'Descrizione del mio quinto post', 'https://picsum.photos/id/19/800/800', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
+INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('New Cover', 'Descrizione del mio sesto post', 'https://picsum.photos/id/22/800/800', 1, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
+INSERT INTO db_fotoalbum.posts (title, description, url, is_visible, created_at, updated_at) VALUES ('Collection 3', 'Descrizione del mio settimo post', 'https://picsum.photos/id/29/800/800', 0, '2023-03-30 11:33:50', '2023-03-30 11:33:50');
 INSERT INTO db_fotoalbum.categories (name) VALUES ('portrait');
 INSERT INTO db_fotoalbum.categories (name) VALUES ('landscape');
 INSERT INTO db_fotoalbum.categories (name) VALUES ('macro');

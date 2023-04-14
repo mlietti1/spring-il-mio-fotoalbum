@@ -7,19 +7,16 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
 
-    <title>Error [[${status}]]</title>
+    <title>Home</title>
 </head>
-<body class="bg-danger text-light">
-<div th:replace="~{fragments:: navbar('error', '', false)}"></div>
+<body class="bg-dark">
+<div th:replace="~{fragments:: navbar('posts', '', false)}"></div>
 <div class="wrapper">
     <div class="container py-3">
-        <h1 class="text-center mt-5"><i class="fa-solid fa-gear"></i> Oops Server Error</h1>
-    </div>
+        <h2 class="mb-3 pb-3 heading">Categories</h2>
 
-    <div class="container py-3" th:if="${exception}">
-        <p th:text="${exception}"></p>
-        <p th:text="${trace}"></p>
     </div>
 </div>
+
 </body>
 </html>

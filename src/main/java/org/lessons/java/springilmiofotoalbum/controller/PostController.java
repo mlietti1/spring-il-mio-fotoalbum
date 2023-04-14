@@ -82,19 +82,21 @@ public class PostController {
     }
 
     @PostMapping("/edit/{id}")
-    public String update(@PathVariable Integer id, @Valid @ModelAttribute("post") Post formPost, BindingResult bindingResult, Model model){
+    public String update(@PathVariable Integer id, @Valid @ModelAttribute("post") Post formPost, BindingResult bindingResult, Model model, RedirectAttributes redirectAttributes){
         if(bindingResult.hasErrors()){
             model.addAttribute("categoryList", categoryService.getAll());
             return "posts/create-edit";
         }
         try{
             Post updatedPost = postService.updatePost(formPost, id);
+            redirectAttributes.addFlashAttribute("message", new AlertMessage(AlertMessageType.SUCCESS, "Post edited successfully."));
             return "redirect:/posts/" + Integer.toString(updatedPost.getId());
         } catch (PostNotFoundException e){
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Post with id " + id + " not found.");
         }
     }
 
+    @GetMapping("delete/{id}")
     public String delete(@PathVariable Integer id, RedirectAttributes redirectAttributes){
         try{
             boolean success = postService.deleteById(id);

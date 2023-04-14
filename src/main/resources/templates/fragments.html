@@ -52,7 +52,7 @@
                     <a
                             class="nav-link nav-text-color"
                             th:classAppend="${current == 'categories'} ? active : not-active"
-
+                            th:href="@{/posts/categories}"
                     >Categories</a>
                 </li>
                 <!-- <li class="nav-item">
@@ -70,7 +70,7 @@
                   th:action="@{/posts}"
                   th:if="${showSearch}"
             >
-                <input aria-label="Search" class="form-control focus-ring focus-ring-light me-2" name="q"
+                <input aria-label="Search" class="form-control focus-ring focus-ring-secondary me-2" name="q"
                        placeholder="Search"
                        th:value="${keyword}"
                        type="search">

@@ -3,6 +3,7 @@ package org.lessons.java.springilmiofotoalbum.model;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
+import org.hibernate.annotations.ColumnDefault;
 
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -24,6 +25,7 @@ public class Post {
     @NotEmpty
     private String url;
 
+    @ColumnDefault("true")
     private Boolean isVisible;
 
     @ManyToMany
