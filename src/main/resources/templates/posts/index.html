@@ -34,8 +34,8 @@
                     <div class="card-body">
                         <h5 th:text="*{title}" class="card-title"></h5>
                         <p th:text="*{description}" class="card-text truncate"></p>
-                        <a th:href="@{|/posts/edit/*{id}|}" class="text-warning card-btn text-decoration-none me-3">Edit</a>
-                        <a th:href="@{|/posts/delete/*{id}|}" class="text-danger card-btn text-decoration-none">Delete</a>
+                        <a th:href="@{|/posts/edit/*{id}|}" sec:authorize="hasAuthority('ADMIN')" class="text-warning card-btn text-decoration-none me-3">Edit</a>
+                        <a th:href="@{|/posts/delete/*{id}|}" sec:authorize="hasAuthority('ADMIN')" class="text-danger card-btn text-decoration-none">Delete</a>
                     </div>
                 </div>
             </div>

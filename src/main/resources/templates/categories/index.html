@@ -27,10 +27,12 @@
                         <div class="col col-12 col-md-6 col-lg-4" th:each="category : ${list}">
                             <div class="d-flex">
                                 <span class="mb-2" th:text="${category.name}"></span>
-                                <a class="text-warning" th:href="@{/posts/categories(id=${category.id})}"><i
-                                        class="fa-solid fa-pen-to-square ms-2"></i></a>
-                                <a class="text-secondary" th:href="@{|/posts/categories/delete/${category.id}|}"><i
-                                        class="fa-solid fa-trash-can ms-2"></i></a>
+                                <a class="text-warning" th:href="@{/posts/categories(id=${category.id})}">
+                                    <i class="fa-solid fa-pen ms-2"></i>
+                                </a>
+                                <a class="text-secondary" th:href="@{|/posts/categories/delete/${category.id}|}">
+                                    <i class="fa-solid fa-trash-can ms-2"></i>
+                                </a>
                             </div>
 
                         </div>
@@ -56,7 +58,7 @@
                             </div>
                         </div>
 
-                        <button class="btn btn-outline-success" type="submit">Submit</button>
+                        <button class="btn btn-outline-primary" type="submit">Submit</button>
 
                     </form>
                 </div>
