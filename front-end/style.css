@@ -57,3 +57,10 @@ body {
 .loader {
     height: 100%;
 }
+
+#post-form {
+    top: 180px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+}

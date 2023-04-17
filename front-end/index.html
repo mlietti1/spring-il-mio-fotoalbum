@@ -24,9 +24,17 @@
 </head>
 <body class="bg-dark text-light" id="app">
 
-    <div class="heading">
+    <div class="heading position-relative">
         <h1 class="text-light m-0 text-center fw-lighter fst-italic">Cri's Photo Album</h1>
-        <button @click="toggleForm()" id="toggle-form" class="mt-3 btn btn-outline-light"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button @click="toggleForm()" id="toggle-form" class="mt-3 btn btn-outline-light">Filter by title</button>
+        <div id="post-form" class="position-absolute" :class="showForm ? 'd-block' : 'd-none'">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" v-model="keyword" aria-label="Search" />
+                <button class="btn btn-outline-light" @click.prevent="loadData()" type="submit">
+                    <i class="fa-solid fa-sliders"></i>
+                </button>
+            </form>
+        </div>
     </div>
 
     
