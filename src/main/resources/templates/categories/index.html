@@ -10,7 +10,7 @@
     <title>Home</title>
 </head>
 <body class="bg-dark">
-<div th:replace="~{fragments:: navbar('posts', '', false)}"></div>
+<div th:replace="~{fragments:: navbar('categories', '', false)}"></div>
 <div class="wrapper">
     <div class="container py-3">
         <th:block th:if="${list.size() == 0}">

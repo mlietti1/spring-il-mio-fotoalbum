@@ -1,0 +1,59 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+}
+
+.heading {
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    width: 100%;
+    text-align: center;
+}
+
+.scroll {
+    height: calc(100vh - 160px);
+    overflow-y: scroll;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.img-container img {
+    transition: all 0.5s;
+    max-width: 100%;
+}
+
+.img-container:hover img {
+    filter: brightness(0.75);
+}
+
+.img-container:hover .title, .img-container:hover p{
+    opacity: 100%;
+    left: 20px;
+}
+
+.title{
+    top: 20px;
+}
+
+.img-container p{
+    top: 50px;
+}
+
+.title, .img-container p {
+    left: -20px;
+    opacity: 0%;
+    color: white;
+    transition: all 0.8s;
+    font-weight: 100;
+    z-index: 10;
+}
+
+.loader {
+    height: 100%;
+}

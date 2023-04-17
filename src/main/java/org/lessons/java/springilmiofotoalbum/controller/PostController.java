@@ -96,7 +96,7 @@ public class PostController {
         }
     }
 
-    @GetMapping("delete/{id}")
+    @GetMapping("/delete/{id}")
     public String delete(@PathVariable Integer id, RedirectAttributes redirectAttributes){
         try{
             boolean success = postService.deleteById(id);
@@ -106,7 +106,7 @@ public class PostController {
                 redirectAttributes.addFlashAttribute("message", new AlertMessage(AlertMessageType.ERROR, "Unable to delete post with id " + id + "."));
             }
         } catch (PostNotFoundException e){
-            redirectAttributes.addAttribute("message", new AlertMessage(AlertMessageType.ERROR, "Post with id " + id + " not found."));
+            redirectAttributes.addFlashAttribute("message", new AlertMessage(AlertMessageType.ERROR, "Post with id " + id + " not found."));
         }
         return "redirect:/posts";
     }

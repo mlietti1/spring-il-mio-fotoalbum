@@ -59,6 +59,6 @@ nav{
     font-weight: 100;
 }
 
-.mc-form input {
+.mc-form input, .mc-form .invalid-feedback {
     max-width: 600px;
 }
