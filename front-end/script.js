@@ -4,29 +4,37 @@ createApp({
   data() {
     return {
       message: "Hello Vue",
-      apiUrl: "http://localhost:8080/api/posts",
+      apiPostUrl: "http://localhost:8080/api/posts",
+      apiMsgUrl: "http://localhost:8080/api/messages",
       posts: [],
       keyword: "",
       showForm: false,
       isLoading: true,
+      email: "",
+      text: "",
     };
   },
 
   methods: {
     loadData() {
-      axios.get(this.apiUrl + `?q=${this.keyword}`).then((response) => this.posts = response.data);
+      axios.get(this.apiPostUrl + `?q=${this.keyword}`).then((response) => this.posts = response.data);
       this.isLoading = false;
         
     },
 
     sendMsg() {
       axios
-        .post(this.apiUrl, {
-          //name: this.name,
-          //description: this.description,
-          //price: this.price
+        .post(this.apiMsgUrl, {
+          email: this.email,
+          text: this.text
         })
-        .then(() => this.loadData());
+        .catch((error) => console.log(error))
+        .then((response) => {
+          console.log(response.data);
+          this.email = "";
+          this.text = "";
+          this.loadData();
+        });
     },
     
     scrollDown(){
