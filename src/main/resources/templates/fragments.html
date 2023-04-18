@@ -57,6 +57,13 @@
                     >Categories</a>
                 </li>
                 <li class="nav-item">
+                    <a
+                            class="nav-link nav-text-color"
+                            th:classAppend="${current == 'messages'} ? active : not-active"
+                            th:href="@{/messages}" sec:authorize="hasAuthority('ADMIN')"
+                    >Messages</a>
+                </li>
+                <li class="nav-item">
                     <div class="nav-link nav-text-color">
                         <span sec:authentication="name"></span>
                         <a class="text-light fw-lighter" th:href="@{/logout}">Logout</a>

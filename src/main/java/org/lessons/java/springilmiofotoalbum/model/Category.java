@@ -17,7 +17,7 @@ public class Category {
     private Integer id;
 
     @Column(nullable = false)
-    @NotBlank
+    @NotBlank(message = "The name must not be empty.")
     private String name;
 
     @JsonIgnore

@@ -15,14 +15,14 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Size(min = 3, max = 25)
+    @Size(min = 3, max = 25, message = "The title should be between 3 and 25.")
     @Column(nullable = false)
     private String title;
 
-    @NotEmpty
+    @NotEmpty(message = "The description must not be empty.")
     private String description;
 
-    @NotEmpty
+    @NotEmpty (message = "The photo url must not be empty.")
     private String url;
 
     @ColumnDefault("true")

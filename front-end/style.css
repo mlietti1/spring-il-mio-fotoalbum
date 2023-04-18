@@ -4,7 +4,7 @@ body {
 }
 
 .heading {
-    height: 160px;
+    min-height: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,8 +19,9 @@ body {
 .scroll {
     height: calc(100vh - 160px);
     overflow-y: scroll;
-    max-width: 800px;
+    max-width: 700px;
     margin: 0 auto;
+    scroll-behavior: smooth;
 }
 
 .img-container img {
@@ -32,7 +33,7 @@ body {
     filter: brightness(0.75);
 }
 
-.img-container:hover .title, .img-container:hover p{
+.img-container:hover .title, .img-container:hover p, .img-container:hover .cat-list{
     opacity: 100%;
     left: 20px;
 }
@@ -42,10 +43,10 @@ body {
 }
 
 .img-container p{
-    top: 50px;
+    top: 54px;
 }
 
-.title, .img-container p {
+.title, .img-container p, .cat-list {
     left: -20px;
     opacity: 0%;
     color: white;
@@ -59,8 +60,27 @@ body {
 }
 
 #post-form {
-    top: 180px;
-    left: 50%;
-    transform: translate(-50%);
-    z-index: 10;
+    transition: all 0.5s;
+}
+
+.mc-btn {
+    border-radius: 32px !important;
+    padding: 6px 10px !important;
+}
+
+.cat-list {
+    top: 80px;
+}
+
+.arrow {
+    top: 18px;
+    right: calc((100vw - 660px) / 2 );    
+    z-index: 20;
+}
+
+@media screen and (max-width: 700px) {
+    .arrow {
+        right: 20px;
+    }
+    
 }
